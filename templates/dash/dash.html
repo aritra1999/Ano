@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+{% block content %}
+    <h1>Messages</h1>
+    <input type="text" value="{{ url }}" id="myurl" readonly/>
+    <button onclick="myFunction()">Copy text</button>
+
+    <hr>
+    {% for message in messages %}
+        <div style="border: 1px solid #000; border-radius: 4px; padding:10px; margin-bottom: 10px; width: 500px;">
+        {{ message.message }}<hr>
+        {{ message.timestamp }}
+        </div>
+    {% endfor %}
+
+{% endblock %}

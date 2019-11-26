@@ -1,0 +1,12 @@
+{% block content %}
+    <form action="" method="POST">{% csrf_token %}
+        <label>To:</label>
+        <input type="text" name="to" value="{{ to }}" readonly/>
+        <br>
+        <label>Message:</label>
+        <br>
+        <textarea name="msg" cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

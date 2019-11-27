@@ -37,7 +37,6 @@ def register_page(request):
         "form": form
     }
     if form.is_valid():
-        print(form.cleaned_data)
         name = form.cleaned_data.get("name")
         email = form.cleaned_data.get("email")
         username = form.cleaned_data.get("username")

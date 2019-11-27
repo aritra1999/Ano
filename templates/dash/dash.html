@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% block content %}
+    {% include "base/navbar.html" %}
     <h1>Messages</h1>
     <input type="text" value="{{ url }}" id="myurl" readonly/>
     <button onclick="myFunction()">Copy text</button>
@@ -11,5 +12,5 @@
         {{ message.timestamp }}
         </div>
     {% endfor %}
-
+    {% include "base/footer.html" %}
 {% endblock %}

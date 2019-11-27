@@ -1,9 +1,17 @@
 {% extends "base/base.html" %}
 {% block content %}
-    <h2>Sign Up</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
-    </form>
+    <div class="logcont">
+        <div class="log">
+            <h1 class="loghead">Sign Up</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="logbtn">Register</button>
+            </form>
+            <span class="up">
+                <p class="up">Already having an account?</p>
+                <a href="{% url "login" %}" class="log_link-sec">Sign In</a>
+            </span>
+        </div>
+    </div>
 {% endblock %}

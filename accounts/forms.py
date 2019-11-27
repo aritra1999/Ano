@@ -6,20 +6,20 @@ User = get_user_model()
 
 class LoginForm(forms.Form):
     username = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter Your Username"}))
+        widget=forms.TextInput(attrs={"class": "form-control cusinput", "placeholder": "Email/Username"}))
     password = forms.CharField(
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Enter Your Password"}))
+        widget=forms.PasswordInput(attrs={"class": "form-control cusinput", "placeholder": "Password"}))
 
 
 class RegisterForm(forms.Form):
-    name = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter Your Username"}))
+    name = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control cusinput", "placeholder": "Username"}))
     username = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter Your Username"}))
-    email = forms.EmailField(widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Enter Your Email"}))
+        widget=forms.TextInput(attrs={"class": "form-control cusinput", "placeholder": "Username"}))
+    email = forms.EmailField(widget=forms.TextInput(attrs={"class": "form-control cusinput", "placeholder": "Email"}))
     password = forms.CharField(
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Enter Your Password"}))
+        widget=forms.PasswordInput(attrs={"class": "form-control cusinput", "placeholder": "Password"}))
     password2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput(
-        attrs={"class": "form-control", "placeholder": "Enter Your Password"}))
+        attrs={"class": "form-control cusinput", "placeholder": "Confirm Password"}))
 
     def clean_username(self):
         username = self.cleaned_data.get('username')

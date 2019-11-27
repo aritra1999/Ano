@@ -1,7 +1,23 @@
 {% extends "base/base.html" %}
 {% block content %}
-    <h1>Home</h1>
-    {% if error %}
-        {{ error }}
-    {% endif %}
+    <div class="home_main_cont">
+        <div class="cont">
+            <div class="headcont">
+                <h1 class="home">
+                    Hola amigos! Lets dive in
+                </h1>
+                <p class="home">A platform where you can send messages anonymously ;)</p>
+            </div>
+            <div class="buttn">
+                {% if request.user.is_authenticated %}
+                    <p class="welcome">Welcome {{ request.user.username }}!</p>
+                    <a href="{% url "logout" %}" class="home_link_logout">Logout</a>
+                    <a href="{% url "dash" %}" class="messages">Your Messages</a>
+                {% else %}
+                    <a href="{% url "register" %}" class="home_link">Sign Up</a>
+                    <a href="{% url "login" %}" class="home_link">Sign In</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

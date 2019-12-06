@@ -1,11 +1,9 @@
 {% extends "base/base.html" %}
 {% block content %}
-    <div class="logcont">
-        <div class="log">
+    <div class="logcont container-fluid">
+        <div class="log container">
             <h1 class="loghead">Sign Up</h1>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
+            <form method="post">{% csrf_token %}{{ form.as_p }}
                 <button type="submit" class="logbtn">Register</button>
             </form>
             <span class="up">

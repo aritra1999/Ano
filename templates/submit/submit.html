@@ -1,12 +1,27 @@
+{% extends "base/base.html" %}
 {% block content %}
-    <form action="" method="POST">{% csrf_token %}
-        <label>To:</label>
-        <input type="text" name="to" value="{{ to }}" readonly/>
-        <br>
-        <label>Message:</label>
-        <br>
-        <textarea name="msg" cols="30" rows="10"></textarea>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    {#    <form action="" method="POST">{% csrf_token %}#}
+    {#        <h1 class="submit">#}
+    {#            To {{ to }}#}
+    {#        </h1>#}
+    {#        <br>#}
+    {#        <label>Message:</label>#}
+    {#        <br>#}
+    {#        <textarea name="msg" cols="30" rows="10"></textarea>#}
+    {#        <br>#}
+    {#        <button type="submit">Submit</button>#}
+    {#    </form>#}
+    <div class="maincont container-fluid">
+        <div class="container p-5">
+            <h1 class="to mb-5">
+                To {{ to }}
+            </h1>
+            <form action="" method="POST">{% csrf_token %}
+                <label for="textarea" style="display: block;color: #fafafa; font-size: 20px">Message:</label>
+                <textarea name="msg" class="message" cols="20" rows="10" id="textarea"
+                          placeholder="Start typing...."></textarea>
+                <button type="submit" class="mesub">Submit</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

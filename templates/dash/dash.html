@@ -1,16 +1,64 @@
 {% extends "base/base.html" %}
+{% load static %}
 {% block content %}
-    {% include "base/navbar.html" %}
-    <h1>Messages</h1>
-    <input type="text" value="{{ url }}" id="myurl" readonly/>
-    <button onclick="myFunction()">Copy text</button>
-
-    <hr>
-    {% for message in messages %}
-        <div style="border: 1px solid #000; border-radius: 4px; padding:10px; margin-bottom: 10px; width: 500px;">
-        {{ message.message }}<hr>
-        {{ message.timestamp }}
+    <script>
+        function myFunction() {
+            const copyText = document.getElementById("myurl");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+        }
+    </script>
+    <nav class="cusnav dashnav">
+        <div class="logo">
+            <a href="#" class="logo">
+                <img src="{% static 'img/logowhite.png' %}" alt="" class="logo dashlogo">
+            </a>
         </div>
-    {% endfor %}
-    {% include "base/footer.html" %}
+        {% if user.is_authenticated %}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    {{ user.username }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                </div>
+            </div>
+        {% endif %}
+    </nav>
+    <div class="section container-fluid">
+        <div class="container message">
+        <span class="dashhead">
+            <h1 class="msg">
+                Messages
+            </h1>
+        </span>
+            <span class="link">
+                <label for="myurl" class="sharable">Sharable Link</label>
+                <input type="text" value="{{ url }}" id="myurl" readonly/>
+                <button class="buttn mt-2" onclick="myFunction()">Copy text</button>
+            </span>
+            <div class="messages">
+                {% if messages.count > 0 %}
+                    {% for message in messages %}
+                        <div class="card text-center cuscard">
+                            <div class="card-header">
+                                {{ message.timestamp }}
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ message.message }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h1 class="nomess">
+                        No Messages
+                    </h1>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

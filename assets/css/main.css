@@ -218,97 +218,241 @@ input.submit {
     background-color: #FEC92F;
     letter-spacing: 0.03rem;
 }
-div.foot{
-    width: 100%;
-    background-color: #fdfdfe;
-    padding: 20px 0;
-}
-div.col-sm{
+
+div.col-sm {
     padding: 0 10px;
 }
-img.logoblack{
+
+img.logoblack {
     width: 100px;
 }
-div.footmodel{
+
+div.footmodel {
     padding-top: 30px;
 }
-p.chhota{
+
+p.chhota {
     font-size: 20px;
 }
-a.pro{
+
+a.pro {
     color: #1b1e21;
     display: inline-block;
     margin-right: 15px;
 }
-a.pro:hover{
+
+a.pro:hover {
     text-decoration: none;
 }
-div.desknav{
+
+div.desknav {
     display: block;
 }
-div.mobilenav{
+
+div.mobilenav {
     display: none;
 }
-div.mobiletogg{
+
+div.mobiletogg {
     display: none;
+}
+
+h1.nomess {
+    font-size: 30px;
+    color: #fafafa;
+}
+
+div.section {
+    width: 100%;
+    padding: 100px 0 70px 0;
+    background-color: #151515;
+    height: 100vh;
+}
+
+label.sharable {
+    color: #fafafa;
+    display: block;
+}
+
+span.link {
+    display: block;
+    margin-bottom: 30px;
+}
+
+div.cuscard {
+    margin-bottom: 20px;
+}
+
+#myurl {
+    padding: 10px 20px;
+    width: 300px;
+    color: #5A6268;
+    border: none;
+    border-radius: 6px;
+}
+
+button.buttn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5A6268;
+    color: #fafafa;
+    border-radius: 6px;
+}
+
+span.dashhead {
+    display: block;
+    margin-bottom: 40px;
+}
+
+p.custext {
+    color: #BABABA;
+}
+
+nav.dashnav {
+    background-color: #151515 !important;
+    border-bottom: 1px solid #898989;
+}
+
+img.dashlogo {
+    margin-bottom: 8px;
+}
+
+@font-face {
+    src: url("../fonts/Welcome.ttf");
+    font-family: "welcome";
+}
+
+h1.msg {
+    color: #7395AE;
+    font-family: welcome, serif;
+    font-size: 70px;
+}
+
+div.maincont {
+    background-color: #151515;
+    width: 100vw;
+    height: 100vh;
+}
+
+div.cuslist {
+    margin: 10px 10px;
+}
+
+h1.to {
+    font-family: welcome, serif;
+    font-size: 80px;
+    color: #7395AE;
+}
+
+button.mesub {
+    border: none;
+    background-color: #5A6268;
+    color: #fafafa;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 150px;
+}
+
+div.cont {
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
+
+h1.sent {
+    font-family: welcome, serif;
+    font-size: 5rem;
+}
+
+div.sent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.submit {
+    color: #7395AE;
+}
+
+textarea.message {
+    width: 100%;
+    padding: 20px;
+    border-radius: 7px;
+
 }
 
 /*RESPONSIVE*/
 
-
 @media only screen and (max-width: 1000px) {
-    nav.cusnav{
+    nav.cusnav {
         padding: 0 20px;
     }
-    div.mobiletogg{
+
+    div.mobiletogg {
         display: block;
     }
-    div.desknav{
+
+    div.desknav {
         display: none;
     }
-    div.container-cus{
+
+    div.container-cus {
         padding: 0 10px;
     }
-    div.second{
+
+    div.second {
         background-size: cover;
     }
-    input.news{
+
+    input.news {
         width: 60%;
     }
-    img.logo{
+
+    img.logo {
         width: 120px;
         margin-top: 0;
     }
-    span.head{
+
+    span.head {
         font-size: 120px;
     }
-    p.text{
+
+    p.text {
         font-size: 15px;
     }
-    ul.link{
+
+    ul.link {
         margin: 0 10px;
         font-size: 12px;
     }
-    div.links{
+
+    div.links {
         display: none;
     }
-    img.toggle{
+
+    img.toggle {
         position: absolute;
         top: 20px;
         right: 20px;
     }
-    li{
+
+    li {
         list-style-type: none;
     }
-    li.mobile-link-item{
+
+    li.mobile-link-item {
         text-align: center;
         margin: 30px 0;
     }
-    li.mobile-link-item a{
+
+    li.mobile-link-item a {
         color: #fdfdfe;
         font-size: 20px;
     }
-    div.mobilenav{
+
+    div.mobilenav {
         position: absolute;
         top: 0;
         left: 0;
@@ -319,13 +463,16 @@ div.mobiletogg{
         align-items: center;
         background-color: #1b1e21;
     }
-    h1.news{
+
+    h1.news {
         font-size: 90px;
     }
-    div.toggle{
+
+    div.toggle {
         display: block;
     }
-    img.toggle{
+
+    img.toggle {
         width: 30px;
         margin-top: 20px;
         margin-right: 20px;
@@ -333,66 +480,85 @@ div.mobiletogg{
 }
 
 @media only screen and (max-width: 670px) {
-    nav.cusnav{
+    nav.cusnav {
         padding: 0 20px;
     }
-    div.container-cus{
+
+    div.container-cus {
         padding: 0 10px;
     }
-    img.logo{
+
+    img.logo {
         width: 80px;
         margin-top: 0;
     }
-    span.head{
+
+    span.head {
         font-size: 80px;
     }
-    span.head{
+
+    span.head {
         font-size: 100px;
     }
-    a.button_link{
+
+    a.button_link {
         width: 40%;
         text-align: center;
     }
-    p.text{
+
+    p.text {
         font-size: 14px;
         letter-spacing: 0;
     }
-    ul.link{
+
+    ul.link {
         margin: 0 10px;
         font-size: 12px;
     }
-    div.links{
+
+    div.links {
         display: none;
     }
-    input.news{
+
+    input.news {
         width: 80%;
     }
-    div.second{
+
+    div.second {
         background-image: none;
     }
 }
 
-@media screen and (max-width: 420px){
-    span.head{
+@media screen and (max-width: 420px) {
+    span.head {
         font-size: 80px;
         line-height: 70px;
     }
-    a.button_link{
+
+    a.button_link {
         width: 40%;
         padding: 10px 0;
     }
-    h1.news{
+
+    h1.news {
         font-size: 70px;
     }
-    img.toggle{
+
+    img.toggle {
         margin-top: 0;
         margin-right: 0;
     }
-    ul.mobile-link{
+
+    ul.mobile-link {
         margin: 0;
         padding: 0;
     }
-    div.second{
+
+    div.second {
         background-image: none;
+    }
+
+    .msg-list {
+        display: block;
     }
 }

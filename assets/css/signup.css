@@ -1,0 +1,58 @@
+div.logcont {
+    background-image: url("../img/black-textile-952670.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.log {
+    border-radius: 8px;
+    width: 500px;
+    background-color: #fdfdfe;
+    padding: 40px;
+}
+
+h1.loghead {
+    margin-bottom: 20px;
+}
+
+button.logbtn {
+    border: none;
+    background-color: #007bff;
+    color: #fdfdfe;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+span.up {
+    text-align: center;
+    display: block;
+    line-height: 15px;
+}
+
+button.logbtn {
+    margin-bottom: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 670px) {
+    div.log {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    div.log {
+        width: 350px;
+        padding: 20px;
+    }
+}

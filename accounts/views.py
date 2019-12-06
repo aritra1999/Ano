@@ -9,7 +9,8 @@ def login_page(request):
         return redirect("/dashboard/")
     form = LoginForm(request.POST or None)
     context = {
-        "form": form
+        "form": form,
+        "title": "Login"
     }
     if form.is_valid():
         username = form.cleaned_data.get("username")
@@ -32,7 +33,7 @@ def register_page(request):
         return redirect("/dashboard/")
     form = RegisterForm(request.POST or None)
     context = {
-        "title": "Login",
+        "title": "Register",
         "content": "Login",
         "form": form
     }

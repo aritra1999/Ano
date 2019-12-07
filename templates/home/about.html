@@ -1,4 +1,63 @@
 {% extends "base/base.html" %}
+{% load static %}
 {% block content %}
-    <h1>About</h1>
+    <div class="contmain">
+        <div class="contsec1">
+            <a href="{% url "home" %}" class="home"><img src="{% static "img/logowhite.png" %}" alt=""
+                                                         class="logocc"></a>
+            <h1 class="about">About Us</h1>
+        </div>
+        <div class="contsec2 container">
+            <h1 class="meet">Meet Us</h1>
+            <p class="meet">Yeah just made this project to test our skills in respective fields .
+                Hope you will like it.</p>
+            <div class="profile">
+                <div class="pers">
+                    <div class="img img2"></div>
+                    <div class="abouttext">
+                        <p class="name">Aritra Mondal</p>
+                        <p class="char">Backend Dev</p>
+                        <span class="tags">
+                            <a href="https://github.com/aritra1999" class="link mr-2">
+                                <img src="{% static "img/github.svg" %}" alt="" class="link">
+                            </a>
+                            <a href="https://www.instagram.com/__aritra_mondal__/" class="link">
+                                <img src="{% static "img/instagram.svg" %}" alt="" class="link">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="pers">
+                    <div class="img img1"></div>
+                    <div class="abouttext">
+                        <p class="name">Hrishav Kumar</p>
+                        <p class="char">Frontend Dev</p>
+                        <span class="tags">
+                            <a href="https://github.com/hrishavjha" class="link mr-2">
+                                <img src="{% static "img/github.svg" %}" alt="" class="link">
+                            </a>
+                            <a href="https://www.instagram.com/__hrishav__/" class="link">
+                                <img src="{% static "img/instagram.svg" %}" alt="" class="link">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="pers">
+                    <div class="img img3"></div>
+                    <div class="abouttext">
+                        <p class="name">Mayukh Mallick</p>
+                        <p class="char">UI/UX</p>
+                        <span class="tags">
+                            <a href="" class="link mr-2">
+                                <img src="{% static "img/github.svg" %}" alt="" class="link">
+                            </a>
+                            <a href="https://www.instagram.com/the.goofy.guy/" class="link">
+                                <img src="{% static "img/instagram.svg" %}" alt="" class="link">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -1,11 +1,22 @@
 {% extends "base/base.html" %}
+{% load static %}
 {% block content %}
-    <h1>T & C</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium aperiam asperiores beatae
-        consequatur cum explicabo, fuga fugit harum impedit in ipsam minus nesciunt nisi officiis pariatur praesentium
-        quis quod recusandae sapiente ut vel veniam? Commodi dolores ducimus fugit inventore quia, recusandae sapiente.
-        Aperiam aut blanditiis commodi cupiditate esse eveniet ex expedita facilis fuga harum id illo impedit ipsa iure
-        laboriosam laudantium magnam molestias mollitia nam necessitatibus nemo nesciunt nobis non odit perspiciatis
-        quaerat quo reiciendis sed tempora tempore temporibus tenetur, ut voluptas! Delectus eos, nobis rem sequi sint
-        temporibus. Consequatur eligendi facere itaque minima porro quas quidem rem vero!</p>
+    <div class="maincont container-fluid">
+        <a href="{% url "home" %}" class="home"><img src="{% static "img/logowhite.png" %}" alt="" class="logocc"></a>
+        <div class="term container">
+            <h1 class="terms">Terms & Conditions</h1>
+            <p class="terms">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur assumenda autem illo itaque
+                nam
+                nisi, omnis optio, possimus ratione sapiente, temporibus voluptatum? A cupiditate eveniet incidunt qui
+                quis
+                soluta?Facere fuga nesciunt repudiandae. Accusamus accusantium ad assumenda cumque debitis earum enim
+                facilis fuga illo laboriosam, magni molestiae nemo perferendis qui sapiente sequi voluptate! Architecto
+                inventore necessitatibus rem! Laborum, magni?Dolor dolorum earum nisi sit voluptates. Accusamus adipisci
+                aspernatur atque commodi cumque debitis eligendi eos, eum fugit impedit in magnam non odio pariatur
+                placeat
+                praesentium quasi quod quos sunt tempora.
+            </p>
+        </div>
+    </div>
 {% endblock %}

@@ -163,6 +163,12 @@ a.loginlink:hover {
     color: #FEC92F;
 }
 
+div.cuscol {
+    flex: 0 0 50%;
+    width: 50%;
+    padding-right: 15px;
+}
+
 div.scroll {
     position: absolute;
     text-align: center;
@@ -266,7 +272,14 @@ div.section {
     width: 100%;
     padding: 100px 0 70px 0;
     background-color: #151515;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+}
+
+span.count {
+    display: block;
+    color: #fafafa;
+    margin-bottom: 20px;
 }
 
 label.sharable {
@@ -281,22 +294,85 @@ span.link {
 
 div.cuscard {
     margin-bottom: 20px;
+    /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+    /*background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);*/
+    /*background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);*/
+    /*background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);*/
+    /*background-image: linear-gradient(135deg, #3C8CE7 10%, #00EAFF 100%);*/
+    border: 2px solid #3C8CE7;
+    background-color: #151515;
+    color: #fafafa;
+    min-height: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+span.tags {
+    height: 30px;
+}
+
+img.link {
+    height: 30px;
+}
+
+p.cust, p.custdate {
+    background: linear-gradient(135deg, #3C8CE7 10%, #00EAFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p.custdate {
+    font-size: 14px;
+}
+
+div.cardhead {
+    border: none;
+    text-align: right;
+    background-color: #151515;
+}
+
+div.cardbody {
+    text-align: left;
 }
 
 #myurl {
     padding: 10px 20px;
     width: 300px;
-    color: #5A6268;
-    border: none;
+    color: #8e9da4;
+    border: 2px solid #3A88E0;
     border-radius: 6px;
+    background-color: #24292E;
+}
+
+button.dashdrop {
+    background-color: #3A88E0;
+    border: none;
+}
+
+button.dashdrop:hover {
+    background-color: #4C76B8;
+    border: none;
 }
 
 button.buttn {
     padding: 10px 20px;
-    border: none;
-    background-color: #5A6268;
+    border: 2px solid #66A6FF;
+    background-color: #66A6FF;
     color: #fafafa;
     border-radius: 6px;
+}
+
+button.buttn:hover {
+    background-color: #4c76b8;
+    border: 2px solid #4c76b8;
 }
 
 span.dashhead {
@@ -306,6 +382,10 @@ span.dashhead {
 
 p.custext {
     color: #BABABA;
+}
+
+p.custdate {
+    margin: 0 !important;
 }
 
 nav.dashnav {
@@ -323,7 +403,7 @@ img.dashlogo {
 }
 
 h1.msg {
-    color: #7395AE;
+    color: #66a6ff;
     font-family: welcome, serif;
     font-size: 70px;
 }
@@ -383,11 +463,316 @@ textarea.message {
 
 }
 
+.ro {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+div.contmain {
+    width: 100%;
+    height: auto;
+    background: #151515;
+}
+
+div.contsec1 {
+    background-color: #029BF3;
+    min-height: 100vh;
+    width: 100%;
+    height: auto;
+    background-image: url("../img/topleft.svg"), url("../img/topright.svg"), linear-gradient(45deg, #2E9CD1, #4255CF);
+    background-position: -4% -6%, 110% -9%;
+    background-repeat: no-repeat, no-repeat;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.about {
+    font-family: welcome, serif;
+    font-size: 100px;
+    color: #fafafa;
+}
+
+div.contsec2 {
+    min-height: 100vh;
+    height: auto;
+    background-color: #151515;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+h1.meet {
+    color: #fafafa;
+    font-size: 90px;
+}
+
+p.meet {
+    color: #fafafa;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+div.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.pers {
+    width: 33%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+div.img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+
+div.abouttext {
+    margin-top: 10px;
+}
+
+div.img1 {
+    background-image: url("../img/women.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div.term {
+    padding-top: 10%;
+}
+
+h1.terms {
+    font-family: welcome, serif;
+    font-size: 80px;
+    color: #007bff;
+}
+
+p.terms {
+    color: #fafafa;
+    line-height: 30px;
+    font-size: 18px;
+    word-spacing: 2px;
+}
+
+img.logocc {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 100px;
+}
+
+div.img2 {
+    background-image: url("../img/women2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div.img3 {
+    background-image: url("../img/women3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+p.name {
+    color: #fafafa;
+    font-size: 30px;
+}
+
+div.abouttext {
+    margin-top: 20px;
+}
+
+p.char {
+    color: #fafafa;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+img.prof {
+    height: 100%;
+    width: 100%;
+}
+
+div.conta {
+    text-align: center;
+}
+
+button.textareabtn {
+    display: block;
+    border: none;
+    background-color: #007bff;
+    padding: 8px 20px;
+    width: 150px;
+    color: #fafafa;
+    border-radius: 8px;
+    margin: 20px auto;
+    transition: all 200ms ease-in-out;
+}
+
+button.textareabtn:hover {
+    background-color: #0055aa;
+}
+
+div.cont_cont {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1.contact {
+    font-size: 80px;
+    font-family: welcome, serif;
+    color: #007bff;
+}
+
+@media screen and (max-width: 420px) {
+    h1.contact {
+        font-size: 70px;
+    }
+}
+
+textarea.textar {
+    border: 2px solid #007bff;
+    background-color: #151515;
+    padding: 20px;
+    width: 90%;
+    color: #fafafa;
+    border-radius: 8px;
+}
+
 /*RESPONSIVE*/
+
+@media only screen and (max-width: 1200px) {
+    h1.meet {
+        color: #fafafa;
+        font-size: 60px;
+    }
+
+    p.meet {
+        color: #fafafa;
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    div.pers {
+        width: 33%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    div.profile {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    h1.meet {
+        color: #fafafa;
+        font-size: 60px;
+    }
+
+    div.abouttext {
+        width: 300px;
+    }
+
+    p.name {
+        font-size: 35px;
+    }
+
+    p.char {
+        font-size: 18px;
+    }
+
+    p.meet {
+        color: #fafafa;
+        font-size: 15px;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1.meet {
+        color: #fafafa;
+        font-size: 60px;
+    }
+
+    p.name {
+        font-size: 20px;
+    }
+
+    p.char {
+        font-size: 14px;
+    }
+
+    p.meet {
+        color: #fafafa;
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    h1.about {
+        font-size: 80px;
+        color: #fafafa;
+    }
+
+    h1.terms {
+        font-size: 50px;
+    }
+
+    p.terms {
+        line-height: 25px;
+        font-size: 14px;
+        word-spacing: 2px;
+    }
+
+    div.term {
+        padding-top: 30%;
+    }
+
+    div.abouttext:last-child {
+        width: 200px;
+    }
+
+    div.pers {
+        width: 33%;
+    }
+
+    div.pers {
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     nav.cusnav {
         padding: 0 20px;
+    }
+
+    .ro {
+        display: grid;
+    }
+
+    div.cuscol {
+        flex: 100%;
+        width: 100%;
     }
 
     div.mobiletogg {
@@ -396,6 +781,10 @@ textarea.message {
 
     div.desknav {
         display: none;
+    }
+
+    div.cuscard {
+        min-height: 150px;
     }
 
     div.container-cus {
@@ -488,6 +877,11 @@ textarea.message {
         padding: 0 10px;
     }
 
+    div.cuscol {
+        flex: 100%;
+        width: 100%;
+    }
+
     img.logo {
         width: 80px;
         margin-top: 0;
@@ -531,8 +925,28 @@ textarea.message {
 
 @media screen and (max-width: 420px) {
     span.head {
-        font-size: 80px;
+        font-size: 70px;
         line-height: 70px;
+    }
+
+    div.message {
+        padding: 0 30px;
+    }
+
+    h1.msg {
+        font-size: 50px;
+    }
+
+    div.cuscol {
+        flex: 100%;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    div.cuscard {
+        margin-right: 0;
+        padding-right: 0;
     }
 
     a.button_link {
@@ -561,4 +975,5 @@ textarea.message {
     .msg-list {
         display: block;
     }
+
 }

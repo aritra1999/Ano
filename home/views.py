@@ -5,25 +5,25 @@ def home_view(request):
     context = {
         "title": "Home"
     }
-    return render(request, "home/home.html", )
+    return render(request, "home/home.html", context)
 
 
 def about_view(request):
     context = {
         "title": "About Us"
     }
-    return render(request, "home/about.html", )
+    return render(request, "home/about.html", context)
 
 
 def contact_view(request):
     context = {
         "title": "Contact Us"
     }
-    return render(request, "home/contact.html", )
+    return render(request, "home/contact.html", context)
 
 
 def term_view(request):
     context = {
-        "title": "Home"
+        "title": "Terms and Conditions"
     }
-    return render(request, "home/terms.html", )
+    return render(request, "home/terms.html", context)

@@ -4,7 +4,6 @@ from submit.models import Message
 
 def dashboard_view(request):
     if request.user.is_authenticated:
-        user_id = request.user.id
         url = "localhost:8000/submit/" + request.user.username
         messages = Message.objects.filter(to=request.user.username).order_by("-timestamp")
         context = {

@@ -1,23 +1,76 @@
-{% extends "base/base.html" %}
+{% extends 'base/base.html' %}
+{% load static %}
 {% block content %}
-
-    <div class="home_main_cont">
-        <div class="cont">
-            <div class="headcont">
-                <h1 class="home">
-                    Hola amigos! Lets dive in
-                </h1>
-                <p class="home">A platform where you can send messages anonymously ;)</p>
+    <nav class="cusnav">
+        <div class="logo">
+            <a href="#" class="logo"><img src="{% static 'img/logowhite.png' %}" alt="" class="logo"></a>
+        </div>
+        <div class="links desknav" id="desknav">
+            <ul class="link">
+                <li class="link_item"><a href="{% url "home" %}">Home</a></li>
+                <li class="link_item"><a href="{% url "contact" %}">Contact Us</a></li>
+                <li class="link_item"><a href="{% url "about" %}">About Us</a></li>
+                <li class="link_item"><a href="{% url "terms" %}">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="mobiletogg" id="mobileopen">
+            <img src="{% static "img/menu-symbol-of-three-parallel-lines.svg" %}" alt="" class="toggle" id="menuopen">
+        </div>
+        <div class="mobilenav" id="mobilenav">
+            <img src="{% static "img/close.svg" %}" alt="" class="toggle" id="menuclose">
+            <ul class="mobile-link">
+                <li class="mobile-link-item"><a href="{% url "home" %}">Home</a></li>
+                <li class="mobile-link-item"><a href="{% url "contact" %}">Contact Us</a></li>
+                <li class="mobile-link-item"><a href="{% url "about" %}">About Us</a></li>
+                <li class="mobile-link-item"><a href="{% url "terms" %}">Terms & Conditions</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="first_cont container-fluid">
+        <div class="firstoverlay"></div>
+        <div class="container-cus">
+            <div class="diag">
+                <h1 class="hola"><span class="head">Hola Amigos!</span></h1>
+                <p class="text">A platform to send message anonymously
+                    to your desired person</p>
+                <a href="{% url "register" %}" class="button_link signup">Sign Up</a><a href="{% url "login" %}"
+                                                                                        class="button_link loginlink">Login</a>
+                <div class="scroll">
+                    <img src="{% static "img/down.svg" %}" alt="" class="down">
+                </div>
             </div>
-            <div class="buttn">
-                {% if request.user.is_authenticated %}
-                    <p class="welcome">Welcome {{ request.user.username }}!</p>
-                    <a href="{% url "logout" %}" class="home_link_logout">Logout</a>
-                    <a href="{% url "dash" %}" class="messages">Your Messages</a>
-                {% else %}
-                    <a href="{% url "register" %}" class="home_link">Sign Up</a>
-                    <a href="{% url "login" %}" class="home_link">Sign In</a>
-                {% endif %}
+        </div>
+    </div>
+    <div class="second_cont container-fluid">
+        <div class="container-cus divsec">
+            <div class="second">
+                <h1 class="news">Get latest updates</h1>
+                <input type="text" name="newsletter" id="newsletter" class="news" placeholder="Notify Me"/>
+                <input type="submit" value="Subscribe" name="submit" class="news submit"/>
+            </div>
+        </div>
+    </div>
+    <div class="foot container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="{% static "img/logoblack.png" %}" alt="" class="logoblack">
+                    <p class="small">
+                        Isn't it fun to send message anonymously.
+                        Yeah we just coded that to have fun.
+                        Just share your link through
+                        your favorite social media channel and see
+                        what others think about you.
+                    </p>
+                </div>
+                <div class="col-sm footmodel">
+                    <p class="chhota">Contact Us</p>
+                    <p class="small">Instagram:<br>
+                        <a href="https://www.instagram.com/__aritra_mondal__/" class="pro">@__aritra_mondal__</a>
+                        <a href="https://www.instagram.com/the.goofy.guy/" class="pro">@the.goofy.guy</a>
+                        <a href="https://www.instagram.com/__hrishav__/" class="pro">@__hrishav__</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

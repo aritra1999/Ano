@@ -2,7 +2,6 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LogoutView
-
 from home.views import home_view, contact_view, about_view, term_view
 from accounts.views import login_page, register_page
 from dashboard.views import dashboard_view

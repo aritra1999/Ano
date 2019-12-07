@@ -1,15 +1,24 @@
-Ano |
-<a href="{% url 'home' %}">Home</a> |
-<a href="{% url 'about' %}">About Us</a> |
-<a href="{% url 'contact' %}">Contact</a> |
-<a href="{% url 'terms' %}">Terms & Conditions</a> |
-{#<a href="{% url '' %}">Terms & Conditions</a> |#}
-
-
-<span style="float: right">
-{% if request.user.is_authenticated %} | Welcome {{ request.user.username }} | <a href="{% url "logout" %}">Logout</a>
-{% else %}
-   <a href="{% url "login" %}">Sign In</a> | <a href="{% url "register" %}">Sign Up</a>
-{% endif %}
-</span>
-<hr>
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<nav class="cusnav">
+    <div class="logo">
+        <a href="#" class="logo">
+            <img src="{% static 'img/logoblack.png' %}" alt="" class="logo">
+        </a>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+    {% endif %}
+</nav>
+{% endblock %}

@@ -1,4 +1,19 @@
 {% extends "base/base.html" %}
+{% load static %}
 {% block content %}
-    <h1>Contact</h1>
+    <div class="maincont">
+        <a href="{% url "home" %}" class="home"><img src="{% static "img/logowhite.png" %}" alt="" class="logocc"></a>
+        <div class="container-fluid cont_cont">
+            <div class="container conta">
+                <h1 class="contact">
+                    Contact Us
+                </h1>
+                <div class="mailto">
+                    <textarea name="mailto" id="mailto" cols="30" rows="10" placeholder="Comments"
+                              class="textar"></textarea>
+                    <button type="submit" class="textareabtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

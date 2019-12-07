@@ -16,17 +16,21 @@
             </a>
         </div>
         {% if user.is_authenticated %}
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle dashdrop" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                    {{ user.username }}
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-{#                    <a class="dropdown-item" href="#">Settings</a>#}
-                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                <div>
+                    <span class="text-light">Welcome {{ user.first_name }}</span>
+                    <a href="{% url 'logout' %}" role="button" class="btn btn-outline-danger pr-3 pl-3 ml-4">Logout</a>
                 </div>
-            </div>
+<!--            <div class="dropdown">-->
+<!--                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton"-->
+<!--                        data-toggle="dropdown"-->
+<!--                        aria-haspopup="true" aria-expanded="false">-->
+<!--                    {{ user.username }}-->
+<!--                </button>-->
+<!--                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">-->
+<!--                    <a class="dropdown-item" href="#">Settings</a>-->
+<!--                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>-->
+<!--                </div>-->
+<!--            </div>-->
         {% endif %}
     </nav>
     <div class="section container-fluid">

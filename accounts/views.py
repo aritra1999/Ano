@@ -21,7 +21,7 @@ def login_page(request):
             return redirect("/dashboard/")
         else:
             print("Error")
-            context["error"] = "Username and Password do not match!"
+            context["error"] = "Invalid credentials!"
     return render(request, "accounts/login.html", context)
 
 
@@ -43,13 +43,15 @@ def register_page(request):
         username = form.cleaned_data.get("username")
         password = form.cleaned_data.get("password")
 
-        f_name = name[0]
-        l_name = name[1]
+        f_name, l_name = name.split()
 
         User.objects.create_user(
             username, email, password,
             first_name=f_name,
             last_name=l_name, )
-        return redirect('/login/')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("/dashboard/")
 
     return render(request, "accounts/register.html", context)

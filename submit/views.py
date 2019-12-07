@@ -21,7 +21,6 @@ def submit_view(request, receiver):
         for invalid_word in invalid_list:
             if invalid_word in message:
                 return redirect("/error/")
-        print(to, message)
         Message.objects.create(to=to, message=message)
         return redirect("/success/")
 

@@ -3,15 +3,16 @@
 {% block content %}
     <div class="logcont">
         <div class="log">
-            {#    <span class="btn">#}
-            {#        <a href="{% url "register" %}" class="log_link">Sign Up</a>#}
-            {#        <a href="{% url "login" %}" class="log_link">Sign In</a>#}
-            {#    </span>#}
             <h1 class="loghead">
                 Login
             </h1>
             <form method="post">
                 {% csrf_token %}
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
                 {{ form.as_p }}
                 <a href="#" class="passreset">Forgot Password?</a>
                 <button type="submit" class="logbtn">Login</button>
